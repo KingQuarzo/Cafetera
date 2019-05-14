@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1074450626003",
+    "firebase_url": "https://cafetera-2051udem.firebaseio.com",
+    "project_id": "cafetera-2051udem",
+    "storage_bucket": "cafetera-2051udem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074450626003:android:d7d22fc1d2ab1f08",
+        "android_client_info": {
+          "package_name": "com.example.cafetera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074450626003-gln7ebkj4154b2fb608en7kevgdr1s7i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cafetera",
+            "certificate_hash": "e80059c6f3b1bba55caa33fdf7e6741a49712a6e"
+          }
+        },
+        {
+          "client_id": "1074450626003-ndu50mgi996gvpsrrt9ambjnh0oc172a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGInGeI6h3ASbhQNmyxpYWKCemjdBCEcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074450626003-ndu50mgi996gvpsrrt9ambjnh0oc172a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

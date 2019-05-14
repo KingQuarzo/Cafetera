@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cafetera</string>
+
+    <string name="campo_Usuarios">id</string>
+    <string name="campo_id">id</string>
+    <string name="campo_password">password</string>
+
+
+</resources>
