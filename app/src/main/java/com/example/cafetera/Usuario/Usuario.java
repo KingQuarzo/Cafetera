@@ -9,6 +9,8 @@ public class Usuario {
         this.id = id;
         this.password = password;
     }
+    public Usuario(){
+    }
 
     public String getId() {
         return id;

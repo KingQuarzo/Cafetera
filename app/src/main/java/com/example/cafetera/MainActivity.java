@@ -29,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initialize();
 
-
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Toast.makeText(MainActivity.this,"Conectando...",Toast.LENGTH_SHORT).show();
+                validate();
             }
         });
     }
@@ -47,39 +46,31 @@ public class MainActivity extends AppCompatActivity {
         bbdd = FirebaseDatabase.getInstance().getReference(getString(R.string.campo_id));
     }
 
-    public  void validate(String userId, String password){
-
-//        Usuario usuario = new Usuario(txtUderId.getText().toString(), txtPassword.getText().toString());
-//        String clave = bbdd.push().getKey();
-//        bbdd.child(clave);
+    public  void validate(){
 
         bbdd.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
-                    Usuario usuario = dataSnapshot.getValue(Usuario.class);
-
+                for (DataSnapshot datasnapshot: dataSnapshot.getChildren()){
+                    Usuario usuario = datasnapshot.getValue(Usuario.class);
+                    Toast.makeText(MainActivity.this,"Conectando...",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,usuario.getId()+usuario.getPassword(),Toast.LENGTH_SHORT).show();
                     if (usuario.getId().equals(txtUderId.getText().toString()) &&
                             usuario.getPassword().equals(txtPassword.getText().toString())){
-                        
+                        Toast.makeText(MainActivity.this,"Bienvenido",Toast.LENGTH_SHORT).show();
+                        nextPage();
                     }
                 }
-
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
-
-
-
     }
 
     public void nextPage(){
         Intent i = new Intent(getApplicationContext(),Main2Activity.class);
         startActivity(i);
     }
-
 }
